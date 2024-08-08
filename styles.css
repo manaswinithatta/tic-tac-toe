@@ -1,0 +1,139 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #ff69b4, #6da3da);
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #8d5d5d;
+  margin-bottom: 10px;
+}
+
+#turnIndicator {
+  font-size: 1.5em;
+  color: #0a1105f5;
+  margin-top: 10px;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#resetButton {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#resetButton:hover {
+  background-color: #e75151;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  border: 2px solid #333;
+  font-size: 2em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cell:hover {
+  background-color: #e0e0e0;
+}
+
+button.blue-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #2508c5;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button.blue-button:hover {
+  background-color: #0967c5da;
+}
+
+.result-screen {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+.result-screen p {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.confetti, .sparks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.confetti div, .sparks div {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  animation: fall 3s linear infinite;
+}
+
+.confetti div {
+  background-color: #fff;
+}
+
+.sparks div {
+  background-color: gold;
+  width: 5px;
+  height: 15px;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
